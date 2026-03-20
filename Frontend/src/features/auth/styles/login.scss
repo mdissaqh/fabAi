@@ -1,0 +1,58 @@
+@mixin flex-col($gap:0rem){
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+};
+
+.login-form-container{
+    height: 100%;
+    width: 100%;
+    @include flex-col(1rem);
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    h1{
+        font-weight: 100;
+        text-align: center;
+    }
+    form{
+        @include flex-col(0.5rem);
+        width: 100%;
+        max-width: 350px;
+        input{
+            padding-inline: 0.7rem;
+            padding-block: 0.4rem;
+            outline: none;
+            border-radius: 0.3rem;
+            border: 1px solid #cccccc;
+            &:focus {
+                border-color: #555555; 
+            }
+        }
+        .password-input-wrapper{
+            display: flex;
+            gap: 0.5rem;
+            input{
+                flex: 1;
+            }
+        }
+        button{
+            height: 1.8rem;
+            padding-inline: 0.7rem;
+            padding-block: 0.4rem;
+            border: none;
+            border-radius: 0.3rem;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            &:active{
+                scale: 0.95;
+            }
+        }
+    }
+    p{
+        a{
+            color: black;
+        }
+    }
+}
