@@ -7,7 +7,7 @@ import chatRouter from "./routes/chat.routes.js";
 
 const app = express();
 
-// Middleware
+app.use(express.static("./public"))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
@@ -17,10 +17,9 @@ app.use(cors({
 }))
 app.use(morgan("dev"))
 
-// Health check
-app.get("/", (req, res) => {
-    res.json({ message: "Server is running" });
-});
+app.get("/api/health", (req, res) => {
+    res.status(200).json({ message: "Server is awake!" });
+})
 
 app.use("/api/auth", authRouter);
 app.use("/api/chats",chatRouter)

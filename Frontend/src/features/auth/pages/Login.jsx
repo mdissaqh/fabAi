@@ -30,7 +30,7 @@ const Login = () => {
   return (
     <div className="login-form-container">
         <form onSubmit={submitHandler}>
-            <h1>Log in to Perplexity</h1>
+            <h1>Log in to Fab AI</h1>
             <input
             onChange={(e)=>{
                 setEmail(e.target.value)

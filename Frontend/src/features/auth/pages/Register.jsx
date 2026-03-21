@@ -25,7 +25,7 @@ const Register = () => {
     return (
         <div className="register-form-container">
             <form onSubmit={submitHandler}>
-                <h1>Register for Perplexity</h1>
+                <h1>Register for Fab AI</h1>
                 <input
                     value={username}
                     onChange={(e) => [
