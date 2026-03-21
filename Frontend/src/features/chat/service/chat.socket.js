@@ -3,7 +3,7 @@ import { createNewChat, createNewMessage, endAiMessageStream, setCurrentChatId, 
 
 let socketInstance
 export const initializeSocketConnection=(dispatch)=>{
-    socketInstance=io("http://localhost:3000",{
+    socketInstance=io("https://fab-ai.onrender.com",{
         withCredentials:true
     })
     socketInstance.on("connect",()=>{
